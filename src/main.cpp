@@ -2,6 +2,7 @@
 #include "backtest/instrument.hpp"
 #include "backtest/bar.hpp"
 #include "backtest/timeseries.hpp"
+#include "backtest/marketdata.hpp"
 
 int main() {
     
@@ -23,8 +24,10 @@ int main() {
     backtest::TimeSeries ts;
     ts.bars.push_back(bar);
 
-    std::cout << "TimeSeries created with " << ts.bars.size()
-                << " bar for " << ts.bars[0].instrument.symbol << "\n";
+    backtest::MarketData md;
+    md.by_symbol["NIFTY"] = ts;
+
+    std::cout << "MarketData loaded with " << md.by_symbol.size() << " instruments\n";
 
 
     return 0;
