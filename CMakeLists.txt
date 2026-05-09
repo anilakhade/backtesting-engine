@@ -10,6 +10,7 @@ add_executable(BacktestEngine
     src/main.cpp
     src/dataloader.cpp
     src/backtester.cpp
+    src/execution.cpp
 )
 target_include_directories(BacktestEngine PRIVATE include)
 
