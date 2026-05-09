@@ -9,6 +9,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_executable(BacktestEngine
     src/main.cpp
     src/dataloader.cpp
+    src/backtester.cpp
 )
 target_include_directories(BacktestEngine PRIVATE include)
 
